@@ -17,7 +17,7 @@ class Employee {
   calculatePay() {
     return this.hourWork * this.payRate;
   }
-} //
+}
 
 class FullTimeEmployee extends Employee {
   static PAY_RATE = 10000;
