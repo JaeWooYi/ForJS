@@ -68,6 +68,33 @@ console.log(img);
 console.log();
 
 // 잘라진 새로운 배열을 만듬
-let newArr = img.slice(0, 2); // 0인덱스부터 2인덱스 전까지(0 ~ 1)
+let newArr = img.slice(0, 2); // 0인덱스부터 2인덱스 전까지(0 ~ 1), 그냥 slice() 하면 배열 전체가 반환 되겠지?
 console.log(newArr);
 console.log(img);
+// 그렇다면 slice(2)라고 1개만 쓴다면?
+let newArr2 = img.slice(2);
+console.log(newArr2); // 2부터 전체가 가는거구나
+console.log('뒤에서 슬라이스하고 싶으면 어떻게해요? -를 붙이면 되');
+let newArr3 = img.slice(-3);
+console.log(newArr3);
+
+console.log();
+console.log('여러개의 배열을 붙여 볼까?');
+let exArr = [1, 2, 3];
+let exArr2 = [4, 5, 6];
+let sumArr = exArr.concat(exArr2);
+console.log(sumArr);
+console.log();
+console.log('배열의 순서를 거꾸로 해볼까?');
+let reverseExArr = sumArr.reverse();
+console.log(reverseExArr);
+console.log();
+console.log('중첩 배열을 하나의 배열로 쫙 펴기');
+let oddArr = [
+  [1, 2, 3],
+  [4, 5, [6, 7, 8]],
+];
+console.log(oddArr);
+const oddOddArr = oddArr.flat();
+console.log(oddOddArr);
+// oddOddArr도 플랫해봐
