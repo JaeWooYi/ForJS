@@ -89,6 +89,7 @@ console.log('배열의 순서를 거꾸로 해볼까?');
 let reverseExArr = sumArr.reverse();
 console.log(reverseExArr);
 console.log();
+
 console.log('중첩 배열을 하나의 배열로 쫙 펴기');
 let oddArr = [
   [1, 2, 3],
@@ -98,3 +99,34 @@ console.log(oddArr);
 const oddOddArr = oddArr.flat();
 console.log(oddOddArr);
 // oddOddArr도 플랫해봐
+const oddOddArr2 = oddOddArr.flat();
+console.log(oddOddArr2);
+// console.log('2단계까지 하려면 flat(2)-배열안의 배열까지');
+// console.log(oddArr.flat(2));
+
+console.log();
+
+console.log('특정값으로 배열을 채우기');
+let exSpeArr = [1, 3, [2, 4, [5, 7]]];
+console.log(exSpeArr);
+const exSpeArr2 = exSpeArr.flat(3);
+console.log(exSpeArr2);
+const exSpeArr3 = exSpeArr2.fill(0); // 모든 아이템을 0으로 채움
+console.log(exSpeArr3);
+console.log();
+let exSpeArr4 = exSpeArr3.fill('s', 1, 3); // 1~2까지 s로 채우겠다
+console.log(exSpeArr4);
+exSpeArr4 = exSpeArr3.fill('s', 1); // 1인덱스부터 s로 채우겠다
+console.log(exSpeArr4);
+
+console.log();
+
+console.log('배열을 문자열로 합치기');
+let exJoin = [1, 3, 5, [2, 4, 8, [7, 9]]];
+exJoin = exJoin.flat(2);
+console.log(exJoin);
+// let exJoin2 = exJoin.join();
+// console.log(exJoin2);
+// console.log(typeof exJoin2);
+let exJoin2 = exJoin.join(' | '); // join안에 '|'로 하면 ','대신 '|'로 구분 가능
+console.log(exJoin2);
