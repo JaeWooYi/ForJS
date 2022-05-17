@@ -108,4 +108,14 @@ console.log('3번--------------------------------------------');
 // 퀴즈3: 배열1, 배열2 두개의 배열을 전달받아,
 // 배열1 아이템중 배열2에 존재하는 아이템만 담고 있는 배열 반환
 // input: ['🍌', '🥝', '🍇'],  ['🍌', '🍓', '🍇', '🍓']
-// output: [ '🍌', '🍇' ]
+// output: [ '🍌', '🍇' ] -> 교집합 구하라는거 같아
+console.log();
+
+// 아직 푸는중
+function intersection(interArr1, interArr2) {
+  for (let i = 0; i < interArr1.length; i++) {
+    console.log(interArr1[i]);
+  }
+}
+const quiz3result = intersection();
+console.log(quiz3result);
