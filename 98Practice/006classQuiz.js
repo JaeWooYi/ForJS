@@ -35,3 +35,37 @@ console.log(
   '------------------------------------------------------------------------------------------------------------------------'
 );
 console.log();
+
+class EllErp {
+  constructor(name, department, hourWork, payRate) {
+    this.name = name;
+    this.department = department;
+    this.hourWork = hourWork;
+    this.payRate = payRate;
+  }
+  calculatePay() {
+    return this.hourWork * this.payRate;
+  }
+}
+
+class FullTimeEmployee extends EllErp {
+  static PAY_RATE = 10000;
+  constructor(name, department, hourWork) {
+    super(name, department, hourWork, FullTimeEmployee.PAY_RATE);
+  }
+}
+const cc = new FullTimeEmployee('cc', 'Apart', 100);
+console.log(cc);
+console.log(cc.calculatePay());
+
+console.log();
+
+class PartTimeEmployee extends EllErp {
+  static PAY_RATE = 8000;
+  constructor(name, department, hourWork) {
+    super(name, department, hourWork, PartTimeEmployee.PAY_RATE);
+  }
+}
+const dd = new PartTimeEmployee('dd', 'Bpart', 150);
+console.log(dd);
+console.log(dd.calculatePay());
