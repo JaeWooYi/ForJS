@@ -46,6 +46,14 @@ console.log('3번--------------------------------------------');
 
 let exArr1 = ['🍌', '🥝', '🍇'];
 let exArr2 = ['🍌', '🍓', '🍇', '🍓'];
-
-function inter(array1, array2) {}
-//test
+function inter(array1, array2) {
+  let newArr = [];
+  for (let i = 0; i < array1.length; i++) {
+    if (array2.includes(array1[i])) {
+      newArr.push(array1[i]);
+    }
+  }
+  return newArr;
+}
+let tt = inter(exArr1, exArr2);
+console.log(tt);
