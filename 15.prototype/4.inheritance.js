@@ -52,3 +52,15 @@ dog1.play();
 dog1.printName();
 // dog1.owner = 'YJW'; // -> ㅋㅋㅋㅋㅋㅋ 모르면 걍 넣어버려 -> 23번줄 ...
 console.log(dog1.owner); // -> 얘도 나오고 싶다면?
+
+console.log();
+console.log('----------------------------------------');
+console.log();
+
+console.log(dog1 instanceof Dog);
+console.log(dog1 instanceof Animal);
+console.log(dog1 instanceof Tiger);
+console.log();
+console.log(tiger instanceof Dog);
+console.log(tiger instanceof Animal);
+console.log(tiger instanceof Tiger);
